@@ -1,0 +1,77 @@
+{
+  "theme": "dark",
+  "typography": {
+    "headings": {
+      "font_family": "Sora, sans-serif",
+      "weights": ["600"],
+      "instructions": "Use Sora for all titles and headings. Import via Google Fonts in index.html or CSS."
+    },
+    "body": {
+      "font_family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "instructions": "Use Inter for all body text, paragraphs, and small labels."
+    }
+  },
+  "colors": {
+    "background": "#0B0D12",
+    "surface": "#111827",
+    "primary": "#0066FF",
+    "secondary": "#00D1C2",
+    "text": "#FFFFFF",
+    "muted": "#9CA3AF",
+    "instructions": "Strictly adhere to this color palette. Avoid pure black or random grays; use the deep graphite (#0B0D12) as the foundation. No other vibrant colors besides Electric Blue and Cyan."
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Use moderate glassmorphism for the floating header and specific overlays: backdrop-blur-xl bg-[#0B0D12]/70. Ensure a thin solid border (e.g., border-white/10) to define the edge.",
+    "gradients": "Apply a subtle primary-to-secondary gradient for the word 'CRESCIMENTO' in the hero and the Final CTA band. Ensure gradients are smooth (from-[#0066FF] to-[#00D1C2]).",
+    "borders": "Use very thin, subtle borders (1px border-white/5 or border-white/10) on cards to define shape without heavy shadows.",
+    "lighting": "Create organic blue/cyan lighting using large, highly blurred absolutely positioned divs (e.g., bg-[#0066FF]/20 blur-[100px]) behind key sections like the Hero and Solutions.",
+    "3d_elements": "Discrete 3D abstract shapes can be used as background images. No complex 3D libraries required; rely on the provided abstract images."
+  },
+  "layouts": {
+    "spacing": "Use generous padding for sections (py-20 to py-32). Keep the design breathing. Do not cramp elements.",
+    "header": "Capsule floating fixed header. Use 'fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-6 py-3'. Must contain logo, nav links, and a WhatsApp CTA.",
+    "hero": "Typographic, centralized. H1 should be massive ('text-5xl md:text-7xl'). The word 'CRESCIMENTO.' must have the gradient text effect. Background should have abstract tech visuals and glows.",
+    "cards": "For the 8 Solutions and 4 Differentiators, use grid layouts. Cards should use the 'surface' color (#111827) with subtle borders, displaying a premium technological feel. Hover effects should slightly lift the card and tint the border to primary.",
+    "timeline": "4-step process. Use a vertical connecting line on mobile, turning horizontal on desktop. Clean typography with subtle numbered indicators.",
+    "founder_section": "Must use an elegant photo placeholder frame. ABSOLUTELY NO faces or fake generated people. Use one of the abstract dark cyan/blue images or a stylized monogram frame instead.",
+    "cta_band": "Full width, gradient background (Electric Blue to Cyan). Use dark text (#0B0D12) for maximum contrast. No emojis."
+  },
+  "components": {
+    "instructions_to_main_agent": "Use simple HTML/Tailwind for structural layout (sections, flex, grid). If complex interactives are needed, use shadcn/ui components (js version). Do not build complex accessible components from scratch. Ensure all interactive elements have data-testid attributes."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1710957987034-cea509422852?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaW50ZXJmYWNlJTIwZGFyayUyMGJsdWV8ZW58MHx8fHwxNzkzMjQwNzc4fDA&ixlib=rb-4.1.0&q=85",
+      "category": "hero_background",
+      "description": "Blue and purple lines of light - digital interface style for the hero abstract background."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1669295384050-a1d4357bd1d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMDNkJTIwc2hhcGUlMjBkYXJrJTIwY3lhbnxlbnwwfHx8fDE3OTMyNDA3Nzd8MA&ixlib=rb-4.1.0&q=85",
+      "category": "abstract_3d",
+      "description": "Teal curved 3D wallpaper. Can be used as a subtle background for the 'Founder' placeholder frame or 'About' section."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1758073519996-6d3c63b4922c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGRhcmslMjB0ZWNobm9sb2d5JTIwYmx1ZXxlbnwwfHx8fDE3OTMyNDA3Nzh8MA&ixlib=rb-4.1.0&q=85",
+      "category": "abstract_tech",
+      "description": "Abstract blue glowing dots forming wave patterns. Great for the timeline or positioning sections background overlay."
+    }
+  ],
+  "accessibility": {
+    "contrast": "Ensure white text over #0B0D12 and #111827 has a high contrast ratio. Gradient text must also be legible.",
+    "testing": "All key functional elements MUST have data-testid. E.g., data-testid='whatsapp-cta', data-testid='solution-card'."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Do not use dark colors as gradients. Use solid dark backgrounds.",
+    "Don't make generic centered layouts (except the hero which is explicitly requested). Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) but NEVER use a completely transparent background for floating elements over content.",
+    "You MUST NOT apply universal transition (transition: all). Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container (.App { text-align: center; }).",
+    "Always use modern button styles with interaction animations.",
+    "NEVER use AI assistant Emoji characters like \ud83e\udd16\ud83e\udde0\ud83d\udcad\ud83d\udca1\ud83d\udd2e\ud83c\udfaf for icons.",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "NO emojis, NO prices, NO fake numbers/clients/testimonials. STRICTLY NO faces or people."
+  ]
+}
